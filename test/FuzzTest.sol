@@ -83,7 +83,9 @@ contract FuzzTest is Test {
     }
 
     function setUp() public{
-        pricer = OnChainPricing(0xd27448046354839A1384D70f30e2f9528E361b03);
+        // NOTE: Update after local deploy or new deploy
+        // https://etherscan.io/address/0x2dc7693444acd1eca1d6de5b3d0d8584f3870c49#code
+        pricer = OnChainPricing(0x2DC7693444aCd1EcA1D6dE5B3d0d8584F3870c49);
     }
 
     function testFuzzPricer(uint256 indexIn, uint256 indexOut, uint256 amount) public {

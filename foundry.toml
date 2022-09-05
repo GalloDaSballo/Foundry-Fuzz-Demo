@@ -2,6 +2,6 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
-fuzz_runs = 10000
+fuzz_runs = 1000
 fail_on_revert = true
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
