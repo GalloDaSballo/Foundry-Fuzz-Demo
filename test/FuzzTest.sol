@@ -22,7 +22,7 @@ struct Quote {
 }
 
 interface OnChainPricing {
-  function findOptimalSwap(address tokenIn, address tokenOut, uint256 amountIn) external returns (Quote memory);
+    function findOptimalSwap(address tokenIn, address tokenOut, uint256 amountIn) external returns (Quote memory);
 }
 
 contract FuzzTest is Test {
@@ -95,6 +95,7 @@ contract FuzzTest is Test {
         vm.assume(tokenIn != address(0));
         vm.assume(tokenOut != address(0));
         vm.assume(tokenOut != tokenIn);
+        vm.assume(amount > 1000000);
 
         Quote memory quote = pricer.findOptimalSwap(tokenIn, tokenOut, amount);
         require(quote.amountOut >= 0);
