@@ -4,7 +4,7 @@ out = 'out'
 libs = ['lib']
 
 [fuzz]
-runs = 50
+runs = 1000
 
 [invariant]
 fail_on_revert = true
